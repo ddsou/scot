@@ -72,7 +72,7 @@ class VAR(VARBase):
             # regularized least squares (ridge regression)
             x, y = self._construct_eqns_rls(data)
 
-        b, res, rank, s = sp.linalg.lstsq(x, y)
+        b, res, rank, s = np.linalg.lstsq(x, y)
 
         self.coef = b.transpose()
 
